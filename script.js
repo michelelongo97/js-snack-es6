@@ -18,8 +18,23 @@ console.log(littleBicycle.name);
 //Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 //Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
 //Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+const teams = [
+    {name: 'Milan', points: 0, faults: 0}, {name: 'Juventus', points: 0, faults: 0}, {name: 'Inter', points: 0, faults: 0}
+];
 
+for (let i = 0; i < teams.length; i++) {
+    teams[i].points = Math.floor(Math.random() * 115);
+    teams[i].faults = Math.floor(Math.random() * 101);
+}
 
+const teamFaults = [];
+for (let i = 0; i < teams.length; i++) {
+    teamFaults.push({
+        name: teams[i].name,
+        faults: teams[i].faults
+    });
+}
+console.log(teams);
 //Snack 3 (Bonus)
 //Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
 //La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
