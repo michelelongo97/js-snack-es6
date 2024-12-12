@@ -2,8 +2,16 @@
 //Creare un array di oggetti:
 //Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 //Stampare a schermo la bici con peso minore.
-
-
+const bicycles = [
+    {name: 'Graziella', weight: 500}, {name: 'Mountain Bike', weight: 800}, {name: 'Bianchi', weight: 100}
+];
+let littleBicycle = bicycles[2];
+for (let i = 1; i < bicycles.length; i++) {
+    if (bicycles[i].weight < littleBicycle.weight) {
+        littleBicycle = bicycles[i];
+    }
+}
+console.log(littleBicycle.name);
 //Snack2
 //Creare un array di oggetti di squadre di calcio.
 // Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
